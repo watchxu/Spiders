@@ -8,5 +8,3 @@ multiprocessing.pool -- 使用到进程池，进行批量下载，加快爬取�
 
 
 执行：python3 code.py
-
-
