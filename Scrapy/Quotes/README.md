@@ -1,7 +1,9 @@
-1、切换到quote目录下执行scrapy crawl quotes   
-如果你本地有多个python环境的话，记得使用python -m scrapy crawl quotes  
+# Quotes
+## 切换到quote目录下执行scrapy crawl quotes   
+## 如果你本地有多个python环境的话，记得使用python -m scrapy crawl quotes  
  
-2、目录结构  
+## 目录结构  
+```
 这是一个scrapy框架默认目录结构   
 scrapy.cfg --> 配置文件，指定settings配置文件路径  
 quote/ ---> 该项目的python模块，之后您将在此加入代码   
@@ -10,16 +12,18 @@ quote/middlewares.py --> 存储中间件
 quote/pipelines.py --> 项目中的pipelines文件   
 quote/settings.py --> 定义一些配置信息   
 quote/spiders/ --> 放置spider代码的目录   
+```
 
-
-3、存储是使用mongodb进行数据存储，配置信息是在pipelines.py文件中写了一个MongoPipeline类，
-之后需要在settings.py文件中添加，如果不添加会无法正常将数据存储到数据库中    
+## 存储是使用mongodb进行数据存储，配置信息是在pipelines.py文件中写了一个MongoPipeline类
+## 之后需要在settings.py文件中添加，如果不添加会无法正常将数据存储到数据库中  
+```  
 ITEM_PIPELINES = {  
    'quote.pipelines.TextPipeline': 300,  #后面的数字是优先级，数字越小优先级越高   
    'quote.pipelines.MongoPipeline': 500,     
 }     
+```
 
-
+```
 部分运行结果：  
 2018-06-28 10:52:58 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: quote)    
 2018-06-28 10:52:58 [scrapy.utils.log] INFO: Versions: lxml 4.2.1.0, libxml2 2.9.8, cssselect 1.0.3, parsel     1.4.0, w3lib 1.19.0, Twisted 18.4.0, Python 3.6.5 (default, Apr 25 2018, 14:23:58) - [GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.1)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.2.2, Platform Darwin-17.5.0-x86_64-i386-64bit   
@@ -72,4 +76,4 @@ ITEM_PIPELINES = {
  'tags': ['aliteracy', 'books', 'classic', 'humor'],   
  'text': '“The person, be it gentleman or lady, who has not...'}   
 2018-06-28 10:53:00 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>   
-
+```

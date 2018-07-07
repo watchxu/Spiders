@@ -1,14 +1,18 @@
-环境要求：python3   
-抓取猫眼电影top100 --> code.py   
- 
+# 猫眼
+
+## 环境要求：python3   
+## 抓取猫眼电影top100 --> code.py   
+
+```
 抓取的目标网站为：http://maoyan.com/board/4   
 页面中显示的有效信息有影片名称、主演、上映时间、上映地区、评分、图片等信息   
 点击下一页发现url会变成http://maoyan.com/board/4?offset=30，主要增加了offset参数，   
 且规律是0，10，20，30   
 使用正则表达式对网页进行解析   
+```
 
-
-直接在命令行执行：python3 code.py   
+## 直接在命令行执行：python3 code.py 
+```  
 {'index': '1', 'image': 'http://p1.meituan.net/movie/20803f59291c47e1e116c11963ce019e68711.jpg@160w_220h_1e_1c', 'title': '霸王别姬', 'actor': '张国荣,张丰毅,巩俐', 'time': '1993-01-01(中国香港)', 'score': '9.6'}   
 {'index': '2', 'image': 'http://p0.meituan.net/movie/283292171619cdfd5b240c8fd093f1eb255670.jpg@160w_220h_1e_1c', 'title': '肖申克的救赎', 'actor': '蒂姆·罗宾斯,摩根·弗里曼,鲍勃·冈顿', 'time': '1994-10-14(美国)', 'score': '9.5'}   
 {'index': '3', 'image': 'http://p0.meituan.net/movie/54617769d96807e4d81804284ffe2a27239007.jpg@160w_220h_1e_1c', 'title': '罗马假日', 'actor': '格利高里·派克,奥黛丽·赫本,埃迪·艾伯特', 'time': '1953-09-02(美国)', 'score': '9.1'}   
@@ -29,14 +33,15 @@
 {'index': '18', 'image': 'http://p1.meituan.net/movie/0e91ffcfa7e53449216cc29ee8af513a75791.jpg@160w_220h_1e_1c', 'title': '剪刀手爱德华', 'actor': '约翰尼·德普,薇诺娜·瑞德,黛安·韦斯特', 'time': '1990-12-06(美国)', 'score': '8.8'}   
 {'index': '19', 'image': 'http://p0.meituan.net/movie/43d259ecbcd53e8bbe902632772281d6327525.jpg@160w_220h_1e_1c', 'title': '美丽人生', 'actor': '罗伯托·贝尼尼,尼可莱塔·布拉斯基,乔治·坎塔里尼', 'time': '1997-12-20(意大利)', 'score': '9.3'}   
 {'index': '20', 'image': 'http://p1.meituan.net/movie/c15b7623cce2f51c75562a3baefe507b68290.jpg@160w_220h_1e_1c', 'title': '海上钢琴师', 'actor': '蒂姆·罗斯,普路特·泰勒·文斯,比尔·努恩', 'time': '1998-10-28(意大利)', 'score': '9.2'}   
+```
 
+## 抓取猫眼热映口碑榜 --> code2.py  
+## 抓取的目标网站为：http://maoyan.com/board   
+## 显示片名、主演、上映时间  
+## 使用xpath提取网页内容  
 
-抓取猫眼热映口碑榜 --> code2.py  
-抓取的目标网站为：http://maoyan.com/board   
-显示片名、主演、上映时间  
-使用xpath提取网页内容  
-
-直接在命令行执行：python3 code2.py  
+## 直接在命令行执行：python3 code2.py 
+``` 
 {'id': '1', 'title': '超人总动员2', 'actor': '主演：格雷格·T·尼尔森,霍利·亨特,莎拉·沃威尔', 'time': '间：2018-06-22'}   
 {'id': '2', 'title': '阿飞正传', 'actor': '主演：张国荣,张曼玉,刘德华', 'time': '间：2018-06-25'}   
 {'id': '3', 'title': '超时空同居', 'actor': '主演：雷佳音,佟丽娅,徐峥', 'time': '间：2018-05-18'}   
@@ -46,10 +51,12 @@
 {'id': '7', 'title': '侏罗纪世界2', 'actor': '主演：克里斯·帕拉特,布莱丝·达拉斯·霍华德,泰德·拉文', 'time': '间：2018-06-15'}  
 {'id': '8', 'title': '完美陌生人', 'actor': '主演：朱塞佩·巴蒂斯通,安娜·福列塔,马可·贾利尼', 'time': '间：2018-05-25'}  
 {'id': '9', 'title': '第七个小矮人', 'actor': '主演：Otto Waalkes,Mirco Nontschew,Boris Aljinovic', 'time': '间：2018-06-16'}  
+```
 
-
-两个代码主要分为四个部分：   
+## 两个代码主要分为四个部分： 
+```  
 1、获取抓取的网站源码 --> get_one_page   
 2、解析获取的网站源码 --> parse_one_page  
 3、存储抓取的内容    -->  write_to_file  
 4、主函数           --> main   
+```
