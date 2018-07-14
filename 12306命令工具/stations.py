@@ -24,7 +24,7 @@ import requests
 from prettytable import PrettyTable
 from colorama import init, Fore
 
-init()
+
 
 
 class TrainsCollection:
