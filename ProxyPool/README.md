@@ -1,5 +1,20 @@
 # ProxyPool
 
+## 背景
+
+### 为什么要使用代理池？
+1.许多网站有专门的反爬虫措施，可能遇到封IP等问题 
+2.互联网上公开了大量免费代理，利用好资源 
+3.通过定时的检测维护同样可以得到多个可用的代理 
+
+### 代理池的要求？
+1.多站抓取，异步检测 
+2.定时筛选，持续更新 
+3.提供接口，易于提取 
+
+### 代理池架构
+![Image text](https://github.com/watchxu/PythonSpiders/tree/master/ProxyPool/proxypool/image.png)
+
 ## 安装
 
 ### 安装Python
@@ -50,3 +65,4 @@ def get_proxy():
     except ConnectionError:
         return None
 ```
+
