@@ -13,7 +13,7 @@
 3.提供接口，易于提取 
 
 ### 代理池架构
-![Image text](https://github.com/watchxu/PythonSpiders/tree/master/ProxyPool/proxypool/image.png)
+![Image text](https://github.com/watchxu/PythonSpiders/tree/master/ProxyPool/proxypool/image.jpg)
 
 ## 安装
 
