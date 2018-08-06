@@ -36,4 +36,4 @@ re
 
 
 ## 运行结果
-![Image text]()
+![Image text](https://github.com/watchxu/PythonSpiders/blob/master/%E5%8E%BB%E5%93%AA%E7%BD%91/image.jpeg)
